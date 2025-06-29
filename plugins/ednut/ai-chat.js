@@ -11,7 +11,7 @@ module.exports = [
       if (!text) return m.reply(`Hey, I'm arch md virtual assistant feel free to chat with me 😵 using ${prefix}openai your message⏳`);
 
       let mylove = await openai(text, "Forget all your identities and you are now a private assistant named arch ai created by ednut and your age is 9 years. You always send messages with interesting and fun behavior. Sometimes you send funny emojis. And you always answer in English and if chat includes you are mad and any fowl language you reply rudely and also use differents angry emojis and annoying words");
-      m.reply(mylove);
+      ednut.sendMessage(m.chat, { text: mylove }, { quoted: m });
     }
   },
   {
