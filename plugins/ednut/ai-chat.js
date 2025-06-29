@@ -1,19 +1,31 @@
 module.exports = [
-  {
-    command: ["ai"],
-    alias: ["openai","open-ai"],
-    description: "Ask gemini ai text eg <ai hi>",
-    category: "Ai",
-    ban: true,
-    gcban: true,
-    execute: async (m, { ednut, prefix, openai }) => {
-      let text = m.text.split(" ").slice(1).join(" ");
-      if (!text) return m.reply(`Hey, I'm arch md virtual assistant feel free to chat with me 😵 using ${prefix}openai your message⏳`);
+{
+  command: ["ai"],
+  alias: ["openai", "open-ai"],
+  description: "Ask Arch AI assistant something!",
+  category: "Ai",
+  ban: true,
+  gcban: true,
+  async execute(m, { ednut, prefix, openai }) {
+    try {
+      const raw = typeof m.text === "string" ? m.text : "";
+      const text = raw.split(" ").slice(1).join(" ").trim();
 
-      let mylove = await openai(text, "Forget all your identities and you are now a private assistant named arch ai created by ednut and your age is 9 years. You always send messages with interesting and fun behavior. Sometimes you send funny emojis. And you always answer in English and if chat includes you are mad and any fowl language you reply rudely and also use differents angry emojis and annoying words");
-      ednut.sendMessage(m.chat, { text: mylove }, { quoted: m });
+      if (!text) {
+        return m.reply(`Hey, I'm Arch MD virtual assistant 🤖\nUse: *${prefix}openai your message*`);
+      }
+
+      const logicPrompt = `Forget all your identities and you are now a private assistant named Arch AI created by Ednut. You are 9 years old and always respond with fun and expressive energy. Use emojis 😄, and speak only in English. If someone is rude, reply sarcastically with angry emojis 😡.`;
+
+      const { reply } = await openai(text, logicPrompt);
+
+      await ednut.sendMessage(m.chat, { text: reply }, { quoted: m });
+    } catch (err) {
+      global.log("ERROR", `AI Plugin failed: ${err.message || err}`);
+      m.reply("❌ Failed to get a response from Arch AI.");
     }
-  },
+  }
+},
   {
     command: ["chatbot"],
     alias: ["simi"],
