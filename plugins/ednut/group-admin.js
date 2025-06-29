@@ -6,13 +6,14 @@ module.exports = [
     ban: true,
     gcban: true,
     group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg, text }) => {
+    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, text }) => {
       try {
-        if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
-        if (!m.quoted && !text) return m.reply("Please tag or reply to a user.");
+        if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
+        if (!(isAdmins || isOwner)) return m.reply(msg.admin); // ⬅️ only admin can use
 
         let users = m.mentionedJid[0] || (m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net');
+        if (!users) return m.reply("Please tag or reply to a user.");
+
         await ednut.groupParticipantsUpdate(m.chat, [users], 'promote');
         await ednut.sendMessage(m.chat, {
           text: `@${users.split('@')[0]} has been promoted.`,
@@ -33,13 +34,14 @@ module.exports = [
     ban: true,
     gcban: true,
     group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg, text }) => {
+    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, text }) => {
       try {
+        if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
-        if (!m.quoted && !text) return m.reply("Please tag or reply to a user.");
 
         let users = m.mentionedJid[0] || (m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net');
+        if (!users) return m.reply("Please tag or reply to a user.");
+
         await ednut.groupParticipantsUpdate(m.chat, [users], 'demote');
         await ednut.sendMessage(m.chat, {
           text: `@${users.split('@')[0]} has been demoted.`,
@@ -54,34 +56,6 @@ module.exports = [
   },
 
   {
-    command: ["add"],
-    description: "Add a user to the group",
-    category: "Group",
-    ban: true,
-    gcban: true,
-    group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg, text }) => {
-      try {
-        if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
-
-        let users = m.quoted ? m.quoted.sender : (text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false);
-        if (!users) return m.reply("Reply to or tag a user or enter their number.");
-
-        await ednut.groupParticipantsUpdate(m.chat, [users], 'add');
-        await ednut.sendMessage(m.chat, {
-          text: `@${users.split('@')[0]} has been added to the group chat.`,
-          mentions: [users]
-        });
-        await ednut.sendMessage(m.chat, { delete: m.key });
-      } catch (err) {
-        m.reply("Unable to add member.");
-        if (global.log) global.log("ERROR", `Add Error: ${err.message || err}`);
-      }
-    }
-  },
-
-  {
     command: ["kick"],
     alias: ["fling"],
     description: "Remove a user from the group",
@@ -89,10 +63,10 @@ module.exports = [
     ban: true,
     gcban: true,
     group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg, text }) => {
+    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, text }) => {
       try {
+        if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
 
         let users = m.mentionedJid[0] || (m.quoted ? m.quoted.sender : (text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false));
         if (!users) return m.reply("Tag or reply to a user to kick.");
@@ -118,13 +92,13 @@ module.exports = [
     ban: true,
     gcban: true,
     group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg }) => {
+    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins }) => {
       try {
+                if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
 
         const metadata = await ednut.groupMetadata(m.chat);
-        if (metadata.announce === false) {
+        if (!metadata.announce) {
           await ednut.groupSettingUpdate(m.chat, 'announcement');
           m.reply(`Group has been muted!`);
         } else {
@@ -145,13 +119,13 @@ module.exports = [
     ban: true,
     gcban: true,
     group: true,
-    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, msg }) => {
+    execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins }) => {
       try {
+        if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.BotAdmin);
 
         const metadata = await ednut.groupMetadata(m.chat);
-        if (metadata.announce === true) {
+        if (metadata.announce) {
           await ednut.groupSettingUpdate(m.chat, 'not_announcement');
           m.reply(`Group has been opened!`);
         } else {

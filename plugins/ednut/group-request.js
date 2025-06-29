@@ -6,9 +6,8 @@ module.exports = [
     group: true,
     execute: async (m, { ednut, isBotAdmins, isAdmins, isOwner }) => {
       try {
+              if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.botAdmin);
-
         const response = await ednut.groupRequestParticipantsList(m.chat);
         if (!response || response.length === 0) {
           return ednut.sendMessage(m.chat, { text: "No pending join requests." }, { quoted: m });
@@ -39,9 +38,8 @@ module.exports = [
     group: true,
     execute: async (m, { ednut, isBotAdmins, isAdmins, isOwner }) => {
       try {
+              if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.botAdmin);
-
         const pending = await ednut.groupRequestParticipantsList(m.chat);
         if (!pending || pending.length === 0) {
           return m.reply("No pending participants.");
@@ -78,9 +76,8 @@ module.exports = [
     admin: true,
     execute: async (m, { ednut, isBotAdmins, isAdmins, isOwner, text }) => {
       try {
+              if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
         if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-        if (!isBotAdmins) return m.reply(msg.botAdmin);
-
         const input = text.trim();
 
         // Reject specific user

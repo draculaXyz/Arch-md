@@ -21,7 +21,6 @@ module.exports = [
       }
     }
   },
-
   {
     command: ["facebook"],
     alias: ["fb", "fbvid", "fbvideo"],
@@ -30,23 +29,35 @@ module.exports = [
     ban: true,
     gcban: true,
     execute: async (m, { ednut, axios, text }) => {
-      if (!text) return m.reply("Please input a Facebook media link.");
-      if (!text.includes("facebook.com") && !text.includes("fb.watch")) return m.reply("Invalid Facebook link!");
       try {
-        let apiUrl = `https://api.agatz.xyz/api/facebook?url=${encodeURIComponent(text)}`;
-        let res = await axios.get(apiUrl);
-        let { url: videoUrl, hd, title } = res.data.data;
-        await ednut.sendMessage(m.chat, {
-          video: { url: hd },
-          caption: `*Title:* ${title}\n*Link:* ${videoUrl}\n\n${global.footer}`
-        }, { quoted: m });
+        if (!text) return m.reply("Please provide a Facebook video link.");
+        if (!/(facebook\.com|fb\.watch)/.test(text)) return m.reply("Invalid Facebook link!");
+
+        const apiUrl = `https://fb.bdbots.xyz/dl?url=${encodeURIComponent(text)}`;
+        const { data } = await axios.get(apiUrl);
+
+        if (data.status !== "success" || !data.downloads || !data.downloads.length) {
+          return m.reply(`❌ Failed to fetch download links.`);
+        }
+
+        // Prefer HD link if available
+        const videoLink = data.downloads.find(d => d.quality === 'HD')?.url
+                        || data.downloads[0].url;
+
+        const title = data.title || "Facebook Video";
+
+        // Send video
+        await ednut.sendMessage(
+          m.chat,
+          { video: { url: videoLink }, caption: `🎥 *${title}*\n${global.footer}` },
+          { quoted: m }
+        );
       } catch (err) {
-        global.log("ERROR", `Facebook downloader: ${err.message || err}`);
-        m.reply("Facebook download failed.");
+        global.log("ERROR", `Facebook downloader failed: ${err.message}`);
+        m.reply("❌ Facebook download failed.");
       }
     }
   },
-
   {
     command: ["tiktok"],
     alias: ["tt", "ttvid"],

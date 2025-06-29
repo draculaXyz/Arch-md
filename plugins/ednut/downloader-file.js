@@ -8,34 +8,35 @@ module.exports = [
     gcban: true,
     execute: async (m, { ednut, fetch, text }) => {
       try {
-        if (!text) return m.reply("Please input a MediaFire link.");
-        if (!text.startsWith("https://")) return m.reply("Please input a valid MediaFire link.");
+        if (!text) return m.reply("📎 Please input a MediaFire link.");
+        if (!text.startsWith("https://")) return m.reply("🔗 Please input a valid MediaFire link.");
 
-        let api = await fetch(`https://api.agatz.xyz/api/mediafire?url=${text}`);
-        let res = await api.json();
-        let data = res.data[0];
+        const res = await fetch(`https://archive.lick.eu.org/api/download/mediafire?url=${encodeURIComponent(text)}`);
+        const json = await res.json();
 
-        if (!data?.link) return m.reply("Failed to retrieve MediaFire content.");
+        if (!json || !json.status || !json.result?.download_link) {
+          return m.reply("❌ Failed to retrieve MediaFire content.");
+        }
 
-        let caption = `*MediaFire Downloader*\n\n*Name:* ${data.nama}\n*Size:* ${data.size}\n*Type:* ${data.mime}\n\nDownloading...`;
+        const file = json.result;
+        const fileName = file.title || "file";
+        const mimetype = file.mime_type?.includes("/")
+  ? file.mime_type
+  : `application/${file.mime_type || "zip"}`;
+        const caption = `*📦 MediaFire Downloader*\n\n*Title:* ${file.title}\n*Size:* ${file.size}\n*Type:* ${file.mime_type}\n*Uploaded:* ${file.upload_date}`;
 
-        await ednut.sendMessage(
-          m.chat,
-          {
-            document: { url: data.link },
-            mimetype: data.mime,
-            fileName: data.nama,
-            caption
-          },
-          { quoted: m }
-        );
-      } catch (error) {
-        global.log("ERROR", `mediafire command failed: ${error.message || error}`);
-        m.reply("Failed to download MediaFire file.");
+        await ednut.sendMessage(m.chat, {
+          document: { url: file.download_link },
+          fileName,
+          mimetype,
+          caption: caption + `\n\n${global.footer}`
+        }, { quoted: m });
+      } catch (err) {
+        m.reply("❌ Failed to download MediaFire file.");
+        if (global.log) global.log("ERROR", `MediaFire Plugin: ${err.message}`);
       }
     }
   },
-
   {
     command: ["gitclone"],
     description: "Clone a GitHub repository from URL",

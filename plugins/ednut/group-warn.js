@@ -7,9 +7,8 @@ module.exports = [
     gcban: true,
     group: true,
     execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, text, sleep }) => {
-      if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-      if (!isBotAdmins) return m.reply(msg.BotAdmin);
-
+        if (!(isAdmins || isOwner)) return m.reply(msg.admin);
+                      if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
       const war = global.warn || 3;
       const who = m.mentionedJid?.[0] || m.quoted?.sender;
       if (!who) return m.reply("Tag or reply to someone to warn.");
@@ -50,9 +49,8 @@ module.exports = [
     gcban: true,
     group: true,
     execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins }) => {
-      if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-      if (!isBotAdmins) return m.reply(msg.BotAdmin);
-
+              if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
+        if (!(isAdmins || isOwner)) return m.reply(msg.admin);
       const who = m.mentionedJid?.[0] || m.quoted?.sender;
       if (!who) return m.reply("Tag or reply to someone to reduce warning.");
 
@@ -79,9 +77,8 @@ module.exports = [
     gcban: true,
     group: true,
     execute: async (m, { ednut, isAdmins, isOwner, isBotAdmins, text }) => {
-      if (!(isAdmins || isOwner)) return m.reply(msg.admin);
-      if (!isBotAdmins) return m.reply(msg.BotAdmin);
-
+              if (!isBotAdmins) return m.reply(msg.BotAdmin); // ⬅️ bot must be admin first
+        if (!(isAdmins || isOwner)) return m.reply(msg.admin);
       const who =
         m.mentionedJid?.[0] ||
         m.quoted?.sender ||
