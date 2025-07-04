@@ -1,6 +1,7 @@
 module.exports = [
   {
-    command: ["autosend", "astatus"],
+    command: ["astatus"],
+    alias: ["autosend"],
     description: "Toggle auto status sender: on/off",
     category: "Owner",
     ban: true,
