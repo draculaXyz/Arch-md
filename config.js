@@ -30,8 +30,8 @@ global.scan = 'https://arch.ednut.xyz/'
 global.msg = {
     succes: 'Success',
     owner: 'This feature could be used by owner only',
-	admin: 'This feature could be used by group admin only',
-	BotAdmin: 'This feature could be used when the bot is an admin only',
+    admin: 'This feature could be used by group admin only',
+    BotAdmin: 'This feature could be used when the bot is an admin only',
     group: 'Features Used Only For Groups!',
     private: 'Features Used Only For Private Chat!',
     bot: 'This feature could be used by bot only',
