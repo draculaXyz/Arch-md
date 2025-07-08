@@ -22,7 +22,7 @@ global.simbol = process.env.SYMBOL || '♘';
 global.thumb = process.env.THUMB || "https://files.catbox.moe/bfzvlr.jpg,https://files.catbox.moe/n7wo5h.jpg,https://files.catbox.moe/sidp03.jpg,https://files.catbox.moe/yvb0et.jpg,https://files.catbox.moe/vu2qgl.jpg,https://files.catbox.moe/5rfbw9.jpg,https://files.catbox.moe/5hpljo.jpg,https://files.catbox.moe/o5hve8.jpg,https://files.catbox.moe/7383y9.jpg"
 global.footer = process.env.FOOTER || '';
 global.warn = process.env.WARN || '4'
-global.menutype = process.env.MENU_TYPE || ''
+global.menutype = process.env.MENU_TYPE || '1'
 global.scan = 'https://arch.ednut.xyz/'
 
 
