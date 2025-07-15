@@ -16,6 +16,14 @@ exports.getGroupAdmins = (participants) => {
         return admins || []
      }
      
+ exports.getTime = (format, date) => {
+	if (date) {
+		return moment(date).locale('id').format(format)
+	} else {
+		return moment.tz('Africa/Lagos').locale('id').format(format)
+	}
+}    
+     
      exports.getSizeMedia = (path) => {
     return new Promise((resolve, reject) => {
         if (/http/.test(path)) {
@@ -318,11 +326,3 @@ render: (literal, symbol) => `${literal} ${symbol}B`
 exports.sleep = async (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-fs.unwatchFile(file)
-console.log(chalk.redBright(`Update ${__filename}`))
-delete require.cache[file]
-require(file)
-})
