@@ -1,225 +1,111 @@
-function _0x46f9(_0xb1b4f, _0x253137) {
-    const _0x28ec64 = _0x28ec();
-    _0x46f9 = function (_0x46f99d, _0x4a33d7) {
-        _0x46f99d = _0x46f99d - 0xba;
-        let _0x54e1e9 = _0x28ec64[_0x46f99d];
-        if (_0x46f9['\x6c\x77\x5a\x4a\x48\x78'] === undefined) {
-            var _0x2a1bf5 = function (_0x36670a) {
-                const _0x2e6b81 = '\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x2b\x2f\x3d';
-                let _0x44ddd6 = '';
-                let _0x2c1d7e = '';
-                for (let _0x15404f = 0x0, _0x19752a, _0x139f4b, _0x28173f = 0x0; _0x139f4b = _0x36670a['\x63\x68\x61\x72\x41\x74'](_0x28173f++); ~_0x139f4b && (_0x19752a = _0x15404f % 0x4 ? _0x19752a * 0x40 + _0x139f4b : _0x139f4b, _0x15404f++ % 0x4) ? _0x44ddd6 += String['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'](0xff & _0x19752a >> (-0x2 * _0x15404f & 0x6)) : 0x0) {
-                    _0x139f4b = _0x2e6b81['\x69\x6e\x64\x65\x78\x4f\x66'](_0x139f4b);
-                }
-                for (let _0x10f88a = 0x0, _0x32a67a = _0x44ddd6['\x6c\x65\x6e\x67\x74\x68']; _0x10f88a < _0x32a67a; _0x10f88a++) {
-                    _0x2c1d7e += '\x25' + ('\x30\x30' + _0x44ddd6['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](_0x10f88a)['\x74\x6f\x53\x74\x72\x69\x6e\x67'](0x10))['\x73\x6c\x69\x63\x65'](-0x2);
-                }
-                return decodeURIComponent(_0x2c1d7e);
-            };
-            _0x46f9['\x58\x48\x51\x6a\x67\x6c'] = _0x2a1bf5;
-            _0xb1b4f = arguments;
-            _0x46f9['\x6c\x77\x5a\x4a\x48\x78'] = !![];
-        }
-        const _0x4d914e = _0x28ec64[0x0];
-        const _0x2097cb = _0x46f99d + _0x4d914e;
-        const _0x4e39e0 = _0xb1b4f[_0x2097cb];
-        if (!_0x4e39e0) {
-            _0x54e1e9 = _0x46f9['\x58\x48\x51\x6a\x67\x6c'](_0x54e1e9);
-            _0xb1b4f[_0x2097cb] = _0x54e1e9;
-        } else {
-            _0x54e1e9 = _0x4e39e0;
-        }
-        return _0x54e1e9;
-    };
-    return _0x46f9(_0xb1b4f, _0x253137);
-}
-const _0x1c403e = _0x46f9;
-(function (_0x39bda4, _0xe73b32) {
-    const _0x2521eb = _0x46f9;
-    const _0x4731db = _0x39bda4();
-    while (!![]) {
-        try {
-            const _0x1e31f5 = parseInt(_0x2521eb(0xdd)) / 0x1 + -parseInt(_0x2521eb(0xca)) / 0x2 + -parseInt(_0x2521eb(0xe0)) / 0x3 + parseInt(_0x2521eb(0xe5)) / 0x4 + parseInt(_0x2521eb(0xcc)) / 0x5 * (parseInt(_0x2521eb(0xe9)) / 0x6) + parseInt(_0x2521eb(0xec)) / 0x7 * (parseInt(_0x2521eb(0xc1)) / 0x8) + -parseInt(_0x2521eb(0xbe)) / 0x9 * (parseInt(_0x2521eb(0xfe)) / 0xa);
-            if (_0x1e31f5 === _0xe73b32) {
-                break;
-            } else {
-                _0x4731db['push'](_0x4731db['shift']());
-            }
-        } catch (_0x4947fc) {
-            _0x4731db['push'](_0x4731db['shift']());
-        }
-    }
-}(_0x28ec, 0x8834a));
-const fetch = require('\x6e\x6f\x64\x65\x2d\x66\x65\x74\x63\x68');
-const fs = require('\x66\x73');
-const {writeFileSync, unlinkSync} = require('\x66\x73');
-const {join} = require(_0x1c403e(0xe1));
-function _0x28ec() {
-    const _0x50faa9 = [
-        '\x6d\x4a\x62\x59\x73\x77\x50\x6e\x73\x65\x71',
-        '\x71\x32\x39\x31\x42\x67\x71\x47\x42\x4d\x39\x30\x69\x67\x72\x4c\x42\x67\x76\x30\x7a\x73\x61',
-        '\x42\x67\x76\x55\x7a\x33\x72\x4f',
-        '\x34\x50\x32\x6d\x69\x65\x35\x56\x69\x68\x6a\x4c\x43\x33\x76\x53\x44\x68\x6d\x47\x7a\x4d\x39\x31\x42\x4d\x71\x55',
-        '\x63\x47\x50\x46\x76\x32\x66\x50\x44\x63\x62\x33\x41\x67\x4c\x53\x7a\x73\x62\x30\x41\x67\x75\x47\x79\x78\x62\x57\x69\x67\x4c\x5a\x69\x67\x6a\x4c\x41\x77\x35\x4e\x69\x68\x6e\x4c\x42\x4e\x71\x55\x6c\x49\x35\x46',
-        '\x6d\x74\x61\x58\x6e\x74\x61\x59\x6d\x67\x7a\x71\x75\x76\x48\x4a\x44\x57',
-        '\x34\x50\x32\x6d\x69\x65\x7a\x48\x41\x77\x58\x4c\x7a\x63\x62\x30\x42\x59\x62\x4b\x42\x33\x44\x55\x42\x67\x39\x48\x7a\x63\x62\x30\x41\x67\x75\x47\x71\x76\x62\x6c\x6c\x47',
-        '\x7a\x67\x39\x4a\x44\x77\x31\x4c\x42\x4e\x71',
-        '\x6e\x4a\x71\x34\x43\x66\x50\x54\x41\x30\x54\x72',
-        '\x42\x77\x66\x57',
-        '\x44\x67\x4c\x54\x7a\x71',
-        '\x79\x78\x62\x52\x69\x64\x69\x51',
-        '\x44\x32\x66\x59\x42\x47',
-        '\x6c\x4d\x66\x57\x41\x57',
-        '\x6a\x4d\x58\x50\x42\x77\x4c\x30\x70\x74\x65',
-        '\x43\x32\x76\x55\x7a\x65\x7a\x50\x42\x67\x75',
-        '\x79\x32\x48\x48\x44\x61',
-        '\x6d\x4a\x65\x5a\x6d\x64\x79\x5a\x6e\x68\x50\x4c\x72\x65\x7a\x64\x76\x57',
-        '\x79\x78\x62\x57\x42\x4d\x66\x54\x7a\x71',
-        '\x6e\x64\x6d\x57\x6e\x5a\x43\x30\x6d\x67\x4c\x77\x44\x4b\x6e\x50\x77\x47',
-        '\x71\x76\x62\x6c\x69\x65\x72\x56\x44\x32\x35\x53\x42\x32\x66\x4b\x69\x65\x76\x59\x43\x4d\x39\x59\x6f\x47',
-        '\x7a\x4d\x4c\x53\x7a\x71',
-        '\x72\x4d\x66\x50\x42\x67\x76\x4b\x69\x68\x72\x56\x69\x67\x72\x56\x44\x32\x35\x53\x42\x32\x66\x4b\x6f\x49\x61',
-        '\x43\x4d\x76\x57\x42\x68\x4b',
-        '\x43\x33\x72\x48\x44\x68\x76\x5a\x76\x67\x76\x34\x44\x61',
-        '\x79\x78\x62\x52',
-        '\x7a\x4d\x4c\x53\x7a\x75\x35\x48\x42\x77\x75',
-        '\x7a\x4e\x6a\x56\x42\x71',
-        '\x72\x67\x39\x33\x42\x4d\x58\x56\x79\x77\x72\x4c\x43\x47',
-        '\x63\x55\x6b\x61\x4f\x49\x62\x74\x41\x78\x50\x4c\x6f\x49\x61',
-        '\x63\x55\x6b\x61\x4f\x49\x62\x65\x42\x33\x44\x55\x42\x67\x39\x48\x7a\x64\x4f\x47',
-        '\x43\x32\x76\x55\x7a\x67\x76\x59',
-        '\x42\x77\x4c\x54\x7a\x78\x72\x35\x43\x67\x75',
-        '\x42\x67\x4c\x5a\x44\x61',
-        '\x75\x32\x76\x48\x43\x4d\x6e\x4f\x69\x67\x66\x55\x7a\x63\x62\x4b\x42\x33\x44\x55\x42\x67\x39\x48\x7a\x63\x62\x62\x75\x65\x53\x47\x7a\x4e\x6a\x56\x42\x73\x62\x62\x43\x68\x72\x56\x41\x77\x72\x4c',
-        '\x41\x77\x6e\x56\x42\x47',
-        '\x6d\x74\x61\x32\x6f\x74\x75\x35\x6e\x65\x48\x6f\x7a\x66\x6e\x33\x41\x71',
-        '\x7a\x67\x39\x33\x42\x4d\x58\x56\x79\x77\x72\x5a',
-        '\x6c\x4d\x50\x57\x7a\x57',
-        '\x6d\x4a\x6d\x30\x6d\x64\x61\x33\x6e\x75\x72\x4d\x7a\x32\x31\x72\x72\x61',
-        '\x43\x67\x66\x30\x41\x61',
-        '\x7a\x78\x48\x57\x42\x33\x6a\x30\x43\x57',
-        '\x43\x32\x4c\x36\x7a\x71',
-        '\x44\x4d\x76\x59\x43\x32\x4c\x56\x42\x47',
-        '\x6d\x4a\x79\x35\x6f\x64\x4b\x30\x6d\x65\x6e\x4a\x74\x4d\x6a\x51\x79\x71',
-        '\x42\x67\x4c\x55\x41\x57',
-        '\x42\x77\x76\x5a\x43\x32\x66\x4e\x7a\x71',
-        '\x42\x4d\x66\x54\x7a\x71',
-        '\x6e\x4b\x66\x6c\x76\x77\x7a\x58\x72\x57',
-        '\x63\x55\x6b\x61\x4f\x49\x62\x6a\x72\x64\x4f\x47',
-        '\x43\x32\x76\x48\x43\x4d\x6e\x4f',
-        '\x6d\x74\x4b\x34\x6d\x78\x48\x49\x43\x67\x50\x32\x72\x57',
-        '\x7a\x67\x66\x30\x79\x71',
-        '\x63\x49\x50\x65\x7a\x78\x7a\x4c\x42\x67\x39\x57\x7a\x78\x69\x36\x6b\x49\x61',
-        '\x7a\x67\x66\x30\x79\x77\x58\x50\x43\x33\x71',
-        '\x79\x78\x62\x57\x42\x67\x4c\x4a\x79\x78\x72\x50\x42\x32\x34\x56\x44\x4d\x35\x4b\x6c\x4d\x66\x55\x7a\x68\x6a\x56\x41\x77\x71\x55\x43\x67\x66\x4a\x41\x32\x66\x4e\x7a\x73\x31\x48\x43\x4d\x6e\x4f\x41\x78\x7a\x4c',
-        '\x79\x78\x6a\x59\x79\x78\x4c\x63\x44\x77\x7a\x4d\x7a\x78\x69',
-        '\x74\x49\x39\x62',
-        '\x79\x78\x62\x52\x69\x68\x44\x4f\x79\x78\x72\x5a\x79\x78\x62\x57',
-        '\x7a\x67\x39\x33\x42\x4d\x58\x56\x79\x77\x71',
-        '\x6b\x76\x38\x6b\x72\x78\x48\x48\x42\x78\x62\x53\x7a\x74\x4f\x47\x6b\x47',
-        '\x78\x31\x6a\x4c\x43\x67\x58\x35\x69\x68\x44\x50\x44\x67\x47\x47\x79\x73\x62\x55\x44\x77\x31\x49\x7a\x78\x69\x47\x44\x67\x38\x47\x7a\x67\x39\x33\x42\x4d\x58\x56\x79\x77\x71\x47\x44\x67\x48\x4c\x69\x67\x66\x57\x43\x63\x61\x4f\x6d\x73\x61\x54\x69\x61',
-        '\x43\x33\x72\x56\x43\x4d\x75',
-        '\x43\x67\x66\x4a\x41\x32\x66\x4e\x7a\x71',
-        '\x41\x4e\x6e\x56\x42\x47',
-        '\x41\x77\x31\x4e',
-        '\x41\x68\x72\x30\x43\x68\x6d\x36\x6c\x59\x39\x33\x43\x5a\x43\x31\x6c\x4d\x66\x57\x44\x67\x39\x50\x7a\x67\x75\x55\x79\x32\x39\x54\x6c\x32\x66\x57\x41\x73\x38\x33\x6c\x32\x66\x57\x43\x68\x6d\x56\x43\x32\x76\x48\x43\x4d\x6e\x4f\x70\x33\x66\x31\x7a\x78\x6a\x35\x70\x71',
-        '\x7a\x67\x76\x32\x7a\x77\x58\x56\x43\x67\x76\x59',
-        '\x44\x4d\x76\x59\x42\x4d\x66\x54\x7a\x71'
-    ];
-    _0x28ec = function () {
-        return _0x50faa9;
-    };
-    return _0x28ec();
-}
+const fetch = require("node-fetch");
+const fs = require("fs");
+const { writeFileSync, unlinkSync } = require("fs");
+const { join } = require("path");
+
+// ─── Aptoide API ─────────────────────────────────
 const aptoide = {
-    '\x73\x65\x61\x72\x63\x68': async _0x15404f => {
-        const _0x248cf0 = _0x1c403e;
-        const _0x19752a = await fetch(_0x248cf0(0xfb) + encodeURIComponent(_0x15404f) + '\x26\x6c\x69\x6d\x69\x74\x3d\x31\x30');
-        const _0x139f4b = await _0x19752a['\x6a\x73\x6f\x6e']();
-        return _0x139f4b?.[_0x248cf0(0xef)]?.['\x6c\x69\x73\x74']?.[_0x248cf0(0xc2)](_0x28173f => ({
-            '\x6e\x61\x6d\x65': _0x28173f[_0x248cf0(0xe8)],
-            '\x73\x69\x7a\x65': _0x28173f[_0x248cf0(0xe3)],
-            '\x76\x65\x72\x73\x69\x6f\x6e': _0x28173f[_0x248cf0(0xce)]?.[_0x248cf0(0xfd)],
-            '\x69\x64': _0x28173f[_0x248cf0(0xf8)],
-            '\x64\x6f\x77\x6e\x6c\x6f\x61\x64': _0x28173f['\x73\x74\x61\x74\x73']?.[_0x248cf0(0xde)] || _0x248cf0(0xf2)
-        })) || [];
-    },
-    '\x64\x6f\x77\x6e\x6c\x6f\x61\x64': async _0x10f88a => {
-        const _0x47060d = _0x1c403e;
-        const _0x32a67a = await fetch(_0x47060d(0xfb) + _0x10f88a + _0x47060d(0xc7));
-        const _0x1d37c0 = await _0x32a67a[_0x47060d(0xf9)]();
-        const _0x5b71e0 = _0x1d37c0?.[_0x47060d(0xef)]?.[_0x47060d(0xda)]?.[0x0];
-        const _0x1e0618 = {};
-        _0x1e0618['\x69\x6d\x67'] = _0x5b71e0[_0x47060d(0xdc)];
-        _0x1e0618[_0x47060d(0xfc)] = _0x5b71e0[_0x47060d(0xf7)]['\x6e\x61\x6d\x65'];
-        _0x1e0618['\x61\x70\x70\x6e\x61\x6d\x65'] = _0x5b71e0['\x6e\x61\x6d\x65'];
-        _0x1e0618[_0x47060d(0xe6)] = _0x5b71e0[_0x47060d(0xce)][_0x47060d(0xe1)];
-        return _0x1e0618;
-    }
+  search: async (query) => {
+    const res = await fetch(`https://ws75.aptoide.com/api/7/apps/search?query=${encodeURIComponent(query)}&limit=10`);
+    const json = await res.json();
+    return json?.datalist?.list?.map(v => ({
+      name: v.name,
+      size: v.size,
+      version: v.file?.vername,
+      id: v.package,
+      download: v.stats?.downloads || "N/A"
+    })) || [];
+  },
+
+  download: async (id) => {
+    const res = await fetch(`https://ws75.aptoide.com/api/7/apps/search?query=${id}&limit=1`);
+    const json = await res.json();
+    const app = json?.datalist?.list?.[0];
+    return {
+      img: app.icon,
+      developer: app.store.name,
+      appname: app.name,
+      link: app.file.path
+    };
+  }
 };
-const downloadFile = async _0x394f23 => {
-    const _0x54a9fa = _0x1c403e;
-    const _0x45b326 = await fetch(_0x394f23);
-    if (!_0x45b326['\x6f\x6b'])
-        throw new Error(_0x54a9fa(0xcf) + _0x45b326[_0x54a9fa(0xd1)]);
-    return Buffer[_0x54a9fa(0xd4)](await _0x45b326[_0x54a9fa(0xf1)]());
+
+const downloadFile = async (url) => {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to download file: ${res.statusText}`);
+  return Buffer.from(await res.arrayBuffer());
 };
-module[_0x1c403e(0xe2)] = [{
-        '\x63\x6f\x6d\x6d\x61\x6e\x64': [_0x1c403e(0xd2)],
-        '\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e': _0x1c403e(0xdb),
-        '\x63\x61\x74\x65\x67\x6f\x72\x79': _0x1c403e(0xd5),
-        async '\x65\x78\x65\x63\x75\x74\x65'(_0x577a80, {
-            ednut: _0xa5e07d,
-            text: _0x10d47c
-        }) {
-            const _0x48adf8 = _0x1c403e;
-            if (!_0x10d47c) {
-                return _0x577a80['\x72\x65\x70\x6c\x79']('\x45\x6e\x74\x65\x72\x20\x61\x70\x70\x20\x6e\x61\x6d\x65\x0a\x0a\x45\x78\x61\x6d\x70\x6c\x65\x3a\x0a' + prefix + _0x48adf8(0xf3));
-            }
-            _0xa5e07d[_0x48adf8(0xd2)] = _0xa5e07d[_0x48adf8(0xd2)] || {};
-            if (_0x10d47c[_0x48adf8(0xbb)] <= 0x2 && !isNaN(_0x10d47c) && _0x577a80['\x73\x65\x6e\x64\x65\x72'] in _0xa5e07d[_0x48adf8(0xd2)]) {
-                const _0x1f59d2 = _0xa5e07d[_0x48adf8(0xd2)][_0x577a80['\x73\x65\x6e\x64\x65\x72']];
-                if (_0x1f59d2[_0x48adf8(0xc3)])
-                    clearTimeout(_0x1f59d2['\x74\x69\x6d\x65']);
-                delete _0xa5e07d[_0x48adf8(0xd2)][_0x577a80[_0x48adf8(0xd8)]];
-                if (_0x1f59d2[_0x48adf8(0xf4)])
-                    return _0x577a80[_0x48adf8(0xd0)]('\x59\x6f\x75\x20\x61\x72\x65\x20\x61\x6c\x72\x65\x61\x64\x79\x20\x64\x6f\x77\x6e\x6c\x6f\x61\x64\x69\x6e\x67\x20\x61\x6e\x20\x61\x70\x70\x21');
-                try {
-                    _0x1f59d2[_0x48adf8(0xf4)] = !![];
-                    const _0x4dd40a = await aptoide[_0x48adf8(0xf4)](_0x1f59d2[_0x48adf8(0xed)][_0x10d47c - 0x1]['\x69\x64']);
-                    const _0x3511e7 = '\u26a1\x20\x2a\x41\x70\x70\x20\x4e\x61\x6d\x65\x3a\x2a\x20' + _0x4dd40a[_0x48adf8(0xcb)] + _0x48adf8(0xee) + _0x4dd40a[_0x48adf8(0xfc)] + _0x48adf8(0xbd);
-                    const _0x4ba9c9 = await _0xa5e07d[_0x48adf8(0xc8)](_0x577a80['\x63\x68\x61\x74'], _0x4dd40a[_0x48adf8(0xfa)], _0x4dd40a[_0x48adf8(0xcb)] + _0x48adf8(0xdf), _0x3511e7, _0x577a80);
-                    const _0x529124 = await downloadFile(_0x4dd40a['\x6c\x69\x6e\x6b']);
-                    const _0x209f81 = join(__dirname, _0x4dd40a[_0x48adf8(0xcb)] + _0x48adf8(0xc6));
-                    writeFileSync(_0x209f81, _0x529124);
-                    const _0x7f877e = {};
-                    _0x7f877e['\x75\x72\x6c'] = _0x209f81;
-                    const _0x1e1c92 = {};
-                    _0x1e1c92[_0x48adf8(0xc0)] = _0x7f877e;
-                    _0x1e1c92[_0x48adf8(0xd3)] = _0x4dd40a[_0x48adf8(0xcb)] + _0x48adf8(0xc6);
-                    _0x1e1c92[_0x48adf8(0xd9)] = _0x48adf8(0xf0);
-                    const _0x5dd4d8 = {};
-                    _0x5dd4d8['\x71\x75\x6f\x74\x65\x64'] = _0x4ba9c9;
-                    await _0xa5e07d['\x73\x65\x6e\x64\x4d\x65\x73\x73\x61\x67\x65'](_0x577a80[_0x48adf8(0xc9)], _0x1e1c92, _0x5dd4d8);
-                    try {
-                        unlinkSync(_0x209f81);
-                    } catch (_0x5f2408) {
-                        console[_0x48adf8(0xc5)](_0x48adf8(0xba) + _0x209f81 + '\x3a', _0x5f2408[_0x48adf8(0xe7)]);
-                    }
-                } catch (_0x25b9b3) {
-                    _0x577a80[_0x48adf8(0xd0)](_0x48adf8(0xbf));
-                    console['\x65\x72\x72\x6f\x72'](_0x48adf8(0xcd), _0x25b9b3['\x6d\x65\x73\x73\x61\x67\x65']);
-                } finally {
-                    _0x1f59d2['\x64\x6f\x77\x6e\x6c\x6f\x61\x64'] = ![];
-                }
-            } else {
-                const _0x5c872a = await aptoide[_0x48adf8(0xeb)](_0x10d47c);
-                if (!_0x5c872a['\x6c\x65\x6e\x67\x74\x68'])
-                    return _0x577a80[_0x48adf8(0xd0)](_0x48adf8(0xbc));
-                const _0x52bae7 = _0x5c872a[_0x48adf8(0xc2)]((_0x24b7f1, _0x3c525d) => _0x3c525d + 0x1 + '\x2e\x20' + _0x24b7f1[_0x48adf8(0xe8)] + _0x48adf8(0xd6) + _0x24b7f1[_0x48adf8(0xe3)] + '\x0a\u2022\x20\x56\x65\x72\x73\x69\x6f\x6e\x3a\x20' + _0x24b7f1[_0x48adf8(0xe4)] + _0x48adf8(0xd7) + _0x24b7f1[_0x48adf8(0xf4)] + _0x48adf8(0xea) + _0x24b7f1['\x69\x64'])['\x6a\x6f\x69\x6e']('\x0a\x0a');
-                const _0x4d612d = _0x48adf8(0xf6) + _0x5c872a[_0x48adf8(0xbb)] + _0x48adf8(0xf5) + prefix + _0x48adf8(0xc4);
-                _0x577a80[_0x48adf8(0xd0)](_0x4d612d + '\x0a\x0a' + _0x52bae7);
-            }
-            ;
+
+// ─── PLUGIN EXPORT ────────────────────────────────
+module.exports = [
+  {
+    command: ["apk"],
+    description: "Search & download APK from Aptoide",
+    category: "Downloader",
+    async execute(m, { ednut, text, prefix }) {
+      if (!text) return m.reply(`Enter app name\n\nExample:\n${prefix}apk facebook`);
+
+      ednut.apk = ednut.apk || {};
+
+      // ── If user replies with number ──
+      if (text.length <= 2 && !isNaN(text) && ednut.apk[m.sender]) {
+        const dt = ednut.apk[m.sender];
+
+        // Cancel previous timeout
+        if (dt.time) clearTimeout(dt.time);
+        delete ednut.apk[m.sender];
+
+        if (dt.download) return m.reply("❌ You are already downloading an app!");
+
+        try {
+          dt.download = true;
+
+          const info = await aptoide.download(dt.data[text - 1].id);
+
+          const caption = `🧩 *App Name:* ${info.appname}\n👨‍💻 *Developer:* ${info.developer}\n\n_⌛ Sending APK..._`;
+
+          const preview = await ednut.sendFile(m.chat, info.img, `${info.appname}.jpg`, caption, m);
+
+          const apkBuffer = await downloadFile(info.link);
+          const apkPath = join(__dirname, `${info.appname}.apk`);
+          writeFileSync(apkPath, apkBuffer);
+
+          await ednut.sendMessage(m.chat, {
+            document: { url: apkPath },
+            fileName: `${info.appname}.apk`,
+            mimetype: "application/vnd.android.package-archive"
+          }, { quoted: preview });
+
+          // Cleanup
+          unlinkSync(apkPath);
+        } catch (err) {
+          global.log("ERROR", `APK download error: ${err.message || err}`);
+          m.reply("❌ Failed to download the APK.");
+        } finally {
+          dt.download = false;
         }
-    }];
+
+      } else {
+        // ── Initial search ──
+        const results = await aptoide.search(text);
+        if (!results.length) return m.reply("❌ No results found.");
+
+        const list = results.map((v, i) => (
+          `${i + 1}. ${v.name}\n• Size: ${v.size}\n• Version: ${v.version}\n• Downloads: ${v.download}\n• ID: ${v.id}`
+        )).join("\n\n");
+
+        const header = `_Reply with a number to download (1 - ${results.length})_\nExample: *${prefix}apk 2*`;
+
+        m.reply(`${header}\n\n${list}`);
+
+        ednut.apk[m.sender] = {
+          download: false,
+          data: results,
+          time: setTimeout(() => {
+            delete ednut.apk[m.sender];
+          }, 10 * 60 * 1000) // auto-expire in 10 mins
+        };
+      }
+    }
+  }
+];
