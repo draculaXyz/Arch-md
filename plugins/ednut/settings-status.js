@@ -16,13 +16,13 @@ module.exports = [
         case "on":
           if (global.db.settings.send) return m.reply("Autosend is already enabled.");
           global.db.settings.send = true;
-          m.reply("Autosend turned **ON** successfully.");
+          m.reply("Autosend turned *ON* successfully.");
           break;
 
         case "off":
           if (!global.db.settings.send) return m.reply("Autosend is already disabled.");
           global.db.settings.send = false;
-          m.reply("Autosend turned **OFF** successfully.");
+          m.reply("Autosend turned *OFF* successfully.");
           break;
 
         default:
